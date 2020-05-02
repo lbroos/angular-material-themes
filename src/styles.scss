@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import '../node_modules/@angular/material/theming';
+
+// Be sure to include this mixin only once in your entire application!
+@include mat-core;
+
+// Your palettes
+$md-companyblue: (
+    50 : #edeef6,
+    100 : #d2d6e7,
+    200 : #b5bad8,
+    300 : #979ec8,
+    400 : #808abc,
+    500 : #6a75b0,
+    600 : #626da9,
+    700 : #5762a0,
+    800 : #4d5897,
+    900 : #3c4587,
+    A100 : #d9ddff,
+    A200 : #a6b0ff,
+    A400 : #7383ff,
+    A700 : #596dff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+$md-companypurple: (
+    50 : #f0eef6,
+    100 : #dad5e9,
+    200 : #c2badb,
+    300 : #aa9ecc,
+    400 : #9789c1,
+    500 : #8574b6,
+    600 : #7d6caf,
+    700 : #7261a6,
+    800 : #68579e,
+    900 : #55448e,
+    A100 : #ece6ff,
+    A200 : #c4b3ff,
+    A400 : #9c80ff,
+    A700 : #8867ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// Define the palettes for your theme (available in palette.scss)
+// For each palette, you can optionally specify a default, lighter, and darker hue
+$my-light-theme-primary: mat-palette($mat-green);
+$my-light-theme-accent: mat-palette($mat-lime, 300, 100, 500);
+$my-light-theme-warn: mat-palette($mat-red);
+
+$my-dark-theme-primary: mat-palette($mat-purple);
+$my-dark-theme-accent: mat-palette($mat-pink);
+$my-dark-theme-warn: mat-palette($mat-red);
+
+$my-company-theme-primary: mat-palette($md-companyblue);
+$my-company-theme-accent: mat-palette($md-companypurple);
+$my-company-theme-warn: mat-palette($mat-red);
+
+// Create the theme object
+$my-light-theme: mat-light-theme($my-light-theme-primary, $my-light-theme-accent, $my-light-theme-warn);
+$my-dark-theme: mat-dark-theme($my-dark-theme-primary, $my-dark-theme-accent, $my-dark-theme-warn);
+$my-company-theme: mat-dark-theme($my-company-theme-primary, $my-company-theme-accent, $my-company-theme-warn);
+
+.my-light-theme {
+    @include angular-material-theme($my-light-theme);
+}
+
+.my-dark-theme {
+    @include angular-material-theme($my-dark-theme);
+}
+
+.my-company-theme {
+    @include angular-material-theme($my-company-theme);
+}
+

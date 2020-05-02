@@ -1,0 +1,59 @@
+<div [class]="theme">
+  <mat-toolbar color="primary">
+    <span class="title">Angular Material Theming Demo</span>
+  </mat-toolbar>
+
+  <!-- Material Select -->
+  <mat-card class="example-card">
+    <mat-card-content>
+      <h2>Material Select</h2>
+      <mat-form-field>
+        <mat-select placeholder="Select" [(ngModel)]="theme" name="select" (selectionChange)="onThemeChange()">
+          <mat-option value="my-light-theme">My light theme</mat-option>
+          <mat-option value="my-dark-theme">My dark theme</mat-option>
+          <mat-option value="my-company-theme">My company theme</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p> Selected value: {{theme}} </p>
+    </mat-card-content>
+  </mat-card>
+  <!-- /Material Select -->
+
+  <!-- Material Button -->
+  <mat-card class="example-card">
+    <mat-card-content>
+      <h2>Material Button</h2>
+      <div class="example-button-row">
+        <button mat-raised-button color="primary">PRIMARY RAISED</button>
+        <button mat-raised-button color="accent">ACCENT RAISED</button>
+        <button mat-raised-button color="warn">WARN RAISED</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <!-- /Material Button -->
+
+  <!-- Material Checkbox -->
+  <mat-card class="example-card">
+    <mat-card-content>
+      <h2>Material Checkbox</h2>
+      <div class="example-checkbox-row">
+        <mat-checkbox class="example-margin" color="warn">Unchecked</mat-checkbox>
+        <mat-checkbox class="example-margin" [checked]="true">Checked</mat-checkbox>
+        <mat-checkbox class="example-margin" [indeterminate]="true">Indeterminate</mat-checkbox>
+        <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <!-- /Material Checkbox -->
+
+  <!-- Material Radio Button -->
+  <mat-card class="example-card">
+    <mat-card-content>
+      <h2>Material Radio Button</h2>
+      <mat-radio-button class="example-margin" name="symbol">Alpha</mat-radio-button>
+      <mat-radio-button class="example-margin" name="symbol">Beta</mat-radio-button>
+      <mat-radio-button class="example-margin" name="symbol" disabled>Disabled</mat-radio-button>
+    </mat-card-content>
+  </mat-card>
+  <!-- /Material Radio Button -->
+</div>
